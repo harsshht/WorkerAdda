@@ -1,0 +1,150 @@
+.main-form {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  resize: none;
+}
+
+input[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+.quantity-btn {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  color: #666;
+  cursor: pointer;
+  font-size: 20px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  width: 40px;
+}
+
+.quantity-btn:hover {
+  background-color: #f8f8f8;
+  border-color: #999;
+  color: #333;
+}
+
+.quantity-btn:active {
+  background-color: #f8f8f8;
+  border-color: #999;
+  color: #333;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.25);
+}
+
+.input-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  width: 100%;
+}
+
+.input-group-prepend,
+.input-group-append {
+  display: flex;
+}
+
+.input-group-prepend button,
+.input-group-append button {
+  border-radius: 0;
+}
+
+.input-group-prepend button {
+  border-right: none;
+}
+
+.input-group-append button {
+  border-left: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .main-form {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+/* Style the form container */
+.container {
+  background-color: #f6f6f6;
+  padding: 20px;
+}
+
+/* Style the form inputs and labels */
+.form-control {
+  background-color: #ffffff;
+  color: #333333;
+  border: 2px solid #dddddd;
+}
+
+.form-group label {
+  color: #333333;
+}
+
+/* Style the quantity buttons */
+.quantity-btn {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+.quantity-btn:hover {
+  background-color: #555555;
+}
+
+/* Style the select dropdown */
+.selectpicker {
+  background-color: #ffffff;
+  color: #333333;
+  border: 2px solid #dddddd;
+}
+
+/* Style the form submit button */
+  @keyframes animate-text {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
