@@ -25,27 +25,90 @@
           WorkerAdda
         </h1>
       </div>
-      <button
-        class="text-white inline-flex md:hidden items-center justify-center p-2 rounded-md hover:text-yellow-500 hover:bg-purple-600 focus:outline-none focus:bg-purple-600 focus:text-yellow-500 transition duration-150 ease-in-out"
-        aria-label="Main menu"
-        aria-expanded="false"
-      >
-        <svg class="block h-6 w-6 fill-current" viewBox="0 0 24 24">
-          <path class="heroicon-ui" d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z" />
-        </svg>
-      </button>
-      <div class="hidden md:flex md:items-center md:w-auto">
-        <div class="text-lg md:text-base font-medium md:ml-10 mt-3 md:mt-0">
-          <a
-            class="block md:inline-block text-white hover:text-red-600 md:mt-0 md:ml-4"
-            href="Registration.html"
+
+      <div class="flex items-center">
+        <button
+          class="block px-4 py-2 text-lg font-medium ml-4 text-white bg-blue-400 hover:bg-blue-500 rounded-md"
+          onclick="openModal()"
+          style="border: none; outline: none"
+        >
+          Sign In
+        </button>
+      </div>
+
+      <div id="modal" class="modal" style="display: none">
+        <div
+          class="modal-content"
+          style="
+            background-color: #fefefe;
+            margin: 10% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            border-radius: 10px;
+            width: 300px;
+          "
+        >
+          <span
+            class="close"
+            onclick="closeModal()"
+            style="
+              color: #aaa;
+              float: right;
+              font-size: 28px;
+              font-weight: bold;
+              cursor: pointer;
+            "
+            >&times;</span
           >
-          
-          <a
-            class="block md:inline-block text-white hover:text-red-600 md:mt-0 md:ml-4"
-            href="loginform.html"
-            >Login / Signup</a
-          >
+          <!-- <h2 style="margin-bottom: 20px">Sign In</h2> -->
+          <form id="signInForm">
+            <label for="email" style="display: block; margin-bottom: 10px">
+              Email:
+            </label>
+            <input
+              type="email"
+              id="email"
+              required
+              style="width: 100%; padding: 8px; margin-bottom: 10px"
+            />
+            <label for="password" style="display: block; margin-bottom: 10px">
+              Password:
+            </label>
+            <input
+              type="password"
+              id="password"
+              required
+              style="
+                width: 100%;
+                padding: 8px;
+                margin-bottom: 10px;
+                border: 1px solid #ccc;
+              "
+            />
+
+            <button
+              type="submit"
+              style="
+                background-color: #2078ca;
+                color: white;
+                border: none;
+                padding: 10px 20px;
+                cursor: pointer;
+                border-radius: 4px;
+              "
+            >
+              Sign In
+            </button>
+            <br />
+            <p style="font-size: 14px; color: #555">
+              <a
+                href="#"
+                style="text-decoration: none; color: #2078ca; font-weight: bold"
+                >Register</a
+              >
+              as a new user
+            </p>
+          </form>
         </div>
       </div>
     </nav>
@@ -230,10 +293,10 @@
 
               <label for="options"><br />Types of Workers</label>
               <select id="options" name="options">
-                <option value="option1">Rajmistri</option>
-                <option value="option2">Electrician</option>
-                <option value="option3">Electrician</option>
-                <option value="option3">Carpainter</option></select
+                <option value="Rajmistri">Rajmistri</option>
+                <option value="Electrician">Electrician</option>
+                <option value="Painter">Painter</option>
+                <option value="Carpainter">Carpainter</option></select
               ><br /><br />
 
               <button
@@ -257,42 +320,61 @@
               </button>
             </form>
             <!-- alag  -->
+
+            <div
+              id="formDataDisplay"
+              style="
+                border: 2px solid gold;
+                padding: 20px;
+                border-radius: 10px;
+                animation: shimmer 2s infinite;
+                background-color: #f7f7f7;
+                color: #333;
+                font-family: 'Arial', sans-serif;
+                font-size: 18px;
+                box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+              "
+            >
+              <h2 style="margin-bottom: 10px">
+                Enter your Requirements and click Submit!!
+              </h2>
+            </div>
           </div>
         </div>
       </div>
 
       <!-- from end  -->
 
-    <footer
-  class="bottom-0 left-0 z-20 w-full p-4 bg-black border-t border-gray-200 shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800 dark:border-gray-600"
-  style="font-family: Arial, sans-serif;"
->
-  <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400"
-    >© 2023
-    <a href="https://flowbite.com/" class="hover:underline text-white"
-      >Worker Portfolio</a
-    >. All Rights Reserved.
-  </span>
-  <ul
-    class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0"
-    style="list-style: none; margin: 0; padding: 0;"
-  >
-    <li style="margin-right: 10px;">
-      <a href="#" class="hover:underline md:mr-6 text-white">About</a>
-    </li>
-    <li style="margin-right: 10px;">
-      <a href="#" class="hover:underline md:mr-6 text-white">Privacy Policy</a>
-    </li>
-    <li style="margin-right: 10px;">
-      <a href="#" class="hover:underline md:mr-6 text-white">Licensing</a>
-    </li>
-    <li>
-      <a href="#" class="hover:underline text-white">Contact</a>
-    </li>
-  </ul>
-</footer>
-
-
+      <footer
+        class="bottom-0 left-0 z-20 w-full p-4 bg-black border-t border-gray-200 shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800 dark:border-gray-600"
+        style="font-family: Arial, sans-serif"
+      >
+        <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400"
+          >© 2023
+          <a href="https://flowbite.com/" class="hover:underline text-white"
+            >Worker Portfolio</a
+          >. All Rights Reserved.
+        </span>
+        <ul
+          class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0"
+          style="list-style: none; margin: 0; padding: 0"
+        >
+          <li style="margin-right: 10px">
+            <a href="#" class="hover:underline md:mr-6 text-white">About</a>
+          </li>
+          <li style="margin-right: 10px">
+            <a href="#" class="hover:underline md:mr-6 text-white"
+              >Privacy Policy</a
+            >
+          </li>
+          <li style="margin-right: 10px">
+            <a href="#" class="hover:underline md:mr-6 text-white">Licensing</a>
+          </li>
+          <li>
+            <a href="#" class="hover:underline text-white">Contact</a>
+          </li>
+        </ul>
+      </footer>
     </div>
 
     <script>
@@ -381,6 +463,20 @@
             options: options,
           };
 
+          var formDataDisplay = document.getElementById("formDataDisplay");
+          formDataDisplay.innerHTML =
+            "<h3>Submitted successfully!!<br><br>Form Data:</h3>";
+
+          for (var key in data) {
+            if (data.hasOwnProperty(key)) {
+              formDataDisplay.innerHTML +=
+                "<p><strong>" + key + ":</strong> " + data[key] + "</p>";
+            }
+          }
+
+          formDataDisplay.innerHTML +=
+            "<p style='font-style: italic; color: #888; margin-top: 20px; font-size: 16px;'>We'll be happy to serve you!</p>";
+
           // Push data to database
           push(ref(database, "requests"), data)
             .then(function () {
@@ -390,6 +486,46 @@
             .catch(function (error) {
               alert("Error sending request: " + error.message);
             });
+        });
+    </script>
+    <script>
+      function openModal() {
+        var modal = document.getElementById("modal");
+        modal.style.display = "block";
+      }
+
+      function closeModal() {
+        var modal = document.getElementById("modal");
+        modal.style.display = "none";
+      }
+
+      document
+        .getElementById("signInForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          // Retrieve email and password values
+          var email = document.getElementById("email").value;
+          var password = document.getElementById("password").value;
+
+          // Perform sign-in with Firebase Authentication
+          firebase
+            .auth()
+            .signInWithEmailAndPassword(email, password)
+            .then(function (userCredential) {
+              // Sign-in successful
+              var user = userCredential.user;
+              console.log("Sign-in successful. User:", user);
+              // Perform further actions after successful sign-in
+            })
+            .catch(function (error) {
+              // Handle sign-in errors
+              var errorCode = error.code;
+              var errorMessage = error.message;
+              console.error("Sign-in error:", errorCode, errorMessage);
+            });
+
+          // Close the modal
+          closeModal();
         });
     </script>
   </body>
